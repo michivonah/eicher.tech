@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+        <title>Projects</title>
+        <link rel="stylesheet" href="design.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="favicon.ico">
+    </head>
+    <body>
+        <section class="sub-header">
+            <nav>
+                <a href="index.html"><img src="images/logo.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="">PROJECTS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <div  class="text-box">
+                <h1>Projects</h1>
+                <p>In my still short time as an IT Trainee i have realized some amazing Projects.</p>
+            </div>
+        </section>
+        <!--LINK TO BACKGROUDN IMAGE https://hdqwalls.com/switzerland-lake-landscape-mountains-10k-wallpaper/ -->
+        <!--Projects-->
+
+        <section class="projects">
+            <div class = "row">
+                <div class="project-col">
+                    <h3>Apache Guacamole</h3>
+                    <p>Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH.
+                        It is called clientless because no plugins or client software are required.
+                        Thanks to HTML5, once Guacamole is installed on a server, all you need to access your desktops is a web browser.</p>
+                    <a href="guacamole.html" class="guac-btn">Read More</a>
+                </div>
+                <div class="project-col">
+                    <h3>Presence-Detector</h3>
+                    <p>Have you ever needed someone's help, but you weren't sure if they are on a meeting, in a phone call or just listening to some music?
+                        Well, i and many other of my Colleagues at work ask ourselves this exact question.
+                        So i took it upon myself to stop this madness. Rather my Supervisor told to.
+                        With his help, i built a little LED-Light, which sits on top of you monitor and shines Green if you are available and red if you are in a meeting or on the phone.
+                    </p>
+                    <a href="pd.html" class="pd-btn">Read More</a>
+                </div>
+                <div class="project-col">
+                    <h3>Lab on Nutanix AHV</h3>
+                    <p>One of the first things i got to do at my Apprenticeship was build myself a few Servers, rather VMs on Nutanix AHV.
+                        And well, how do i put this, <br>IT'S AMAZING!
+                    </p>
+                    <a href="nutanix.html" class="ntx-btn">Read More</a>
+                </div>
+            </div>
+        </section>
+        
+        <!--Javascript for Toggle Menu-->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+    </body>
+</html>

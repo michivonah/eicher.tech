@@ -7,6 +7,7 @@
         <link href="lib/bs5/bootstrap.min.css" rel="stylesheet">
         <link href="lib/css/min.css" rel="stylesheet">
         <script src="lib/bs5/bootstrap.bundle.min.js"></script>
+        <script src="lib/jquery/all.min.js"></script>
         <link rel="icon" href="lib/img/favicon.ico">
     </head>
     <body>
@@ -22,20 +23,20 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page">Home</a>
+                        <a class="nav-link active" id="home-link" href="#">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact</a>
+                        <a class="nav-link" id="contact-link" href="#">Contact</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Projects
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                          <li><a class="dropdown-item user-select-none" href="/guacamole">Apache Guacamole</a></li>
-                          <li><a class="dropdown-item user-select-none" href="/nutanix">Nutanix Lab</a></li>
-                          <li><a class="dropdown-item user-select-none" href="/presence-detector">Presence Detector</a></li>
-                          <li><a class="dropdown-item user-select-none" href="/learnjournal">LearnJournal WebApp</a></li>
+                          <li><a class="dropdown-item user-select-none" data-href="guacamole" id="guacamole-project-link" href="#">Apache Guacamole</a></li>
+                          <li><a class="dropdown-item user-select-none" data-href="nutanix" id="nutanix-project-link" href="#">Nutanix Lab</a></li>
+                          <li><a class="dropdown-item user-select-none" data-href="presence-detector" id="presencedetector-project-link" href="#">Presence Detector</a></li>
+                          <li><a class="dropdown-item user-select-none" data-href="learnjournal" id="learnjournal-project-link" href="#">LearnJournal WebApp</a></li>
                         </ul>
                       </li>
                       <li class="nav-item dropdown">
@@ -43,17 +44,17 @@
                           Socials
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                          <li><a class="dropdown-item user-select-none" href="https://github.com/NicoNewsHD"><i class="fa-brands fa-github"></i> Github</a></li>
-                          <li><a class="dropdown-item user-select-none" href="https://www.linkedin.com/in/nico-eicher-69420924b/"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a></li>
-                          <li><a class="dropdown-item user-select-none" href="https://www.instagram.com/niconews_/?theme=dark"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                          <li><a class="dropdown-item user-select-none" href="https://twitter.com/NicoNews_"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                          <li><a class="dropdown-item user-select-none" href="https://github.com/NicoNewsH" target="_blank"><i class="fa-brands fa-github"></i> Github</a></li>
+                          <li><a class="dropdown-item user-select-none" href="https://www.linkedin.com/in/nico-eicher-69420924b/" target="_blank"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a></li>
+                          <li><a class="dropdown-item user-select-none" href="https://www.instagram.com/niconews_/?theme=dark" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                          <li><a class="dropdown-item user-select-none" href="https://twitter.com/NicoNews_" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
                         </ul>
                       </li>
                     </ul>
                   </div>
                 </div>
               </nav>
-              <section class="content">
+              <section class="content" id="content-container">
                 <div class="position-absolute top-50 start-50 translate-middle">
                     <div class="text-center text-light user-select-none">
                         <h1 class="display-1 fw-semibold">Nico Eicher</h1>
@@ -64,5 +65,22 @@
                   </div>
               </section>
         </section>
+        <script src="lib/js/main.js"></script>
+        <script>
+          $("#contact-link").on("click", function(){
+            loadPartialContact();
+            return false;
+          });
+          $("#home-link").on("click", function(){
+            location. reload();
+          });
+          $("[id$='-project-link']").on("click", function(){
+            loadPartialProject($(this).data("href"));
+            return false;
+          });
+          $("#home-link").on("click", function(){
+            loadPartialContact();
+          });
+        </script>
     </body>
 </html>

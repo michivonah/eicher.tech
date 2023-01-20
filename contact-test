@@ -1,0 +1,7 @@
+<div class="position-absolute top-50 start-50 translate-middle">
+    <div class="text-center text-light user-select-none">
+        <h1 class="display-1 fw-semibold">Reach me <i class="fa-solid fa-at"></i></h1>
+        <h4 class="fw-light pb-3">nico@eicher.tech</h4>
+        <a href="mailto:nico@eicher.tech" class="btn btn-outline-light"><i class="fa fa-envelope"></i></a>
+    </div>
+</div>

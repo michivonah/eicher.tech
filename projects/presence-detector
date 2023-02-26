@@ -1,0 +1,45 @@
+<nav class="topnav">
+    <a href="#" onclick="loadHome()">Home</a>
+    <a class="active">Presence-Detector</a>
+  </nav>
+<section>
+    <div class="text-center">
+        <h1 class="hero-text">Presence-Detector</h1>
+        <p>Have you ever needed someone help, but you weren't sure if they were in a Meeting or just listening to Music?
+            Well fear no more! With this Presence-Detector you can, at a glance, see if someones busy or not. </br>
+            <span class="explainer">(patent pending)</span>
+        </p> 
+    </div>
+</section>
+<section>
+    <div class="text-center">
+        <h1 class="hero-text">Selling Points</h1>
+        <p>
+        You might compare this to a BusyLight® from Yealink of Luxafor, but this revolutionary Product brings some much more to the Table:
+        </p> 
+        <ul class="explainer">
+            <li>Automatic Device Detection<sup>*</sup>™</li>
+            <li>Automatic Device Deletion<sup>*</sup>™</li>
+            <li>Dynamic Workplace System<sup>**</sup>™</li>
+            <li>Automatic User Import<sup>***</sup>™</li>
+            <li>Infinite Scalability<sup>****</sup>™</li>
+            <li>Custom Software Support<sup>*****</sup>™</li>
+        </ul>
+    </div>
+</section>
+<section>
+    <div class="img-center">
+        <img src="/lib/img/pd.jpg" draggable="false"/>
+    </div>
+</section>
+<footer>
+    <p>DISCLAIMERS:</p>
+    <ul>
+        <li><sup>*</sup> At the Moment only specific DDI Solutions are supported.</li>
+        <li><sup>**</sup> Monitors with integrated NIC required.</li>
+        <li><sup>***</sup> At the moment only specific Directory Services are supported.</li>
+        <li><sup>****</sup> At the moment only Webex supports Infinite Scalability™.</li>
+        <li><sup>*****</sup> Extra cost of 69'420.- CHF per Software.</li>
+    </ul>
+    <p>Copyright © 2023 Nico Eicher //Presented to <span id="ip-addr"></span></p>
+</footer>

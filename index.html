@@ -1,83 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale = 1.0">
         <title>Nico Eicher</title>
-        <link href="lib/fa/css/all.min.css" rel="stylesheet">
-        <link href="lib/bs5/bootstrap.min.css" rel="stylesheet">
-        <link href="lib/css/site.css" rel="stylesheet">
-        <script src="lib/bs5/bootstrap.bundle.min.js"></script>
-        <script src="lib/jquery/all.min.js"></script>
-        <link rel="icon" href="lib/img/favicon.ico">
+        <link rel="stylesheet" href="/lib/css/style.css"/>
+        <link rel="stylesheet" href="/lib/fa/css/all.min.css"/>
+        <link rel="icon" type="image/x-icon" href="/lib/img/ghost-solid.svg">
     </head>
-    <body>
-        <section class="header">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark user-select-none user-drag-none">
-                <div class="container-fluid">
-                  <a class="navbar-brand">
-                    <img src="lib/img/ne-white.svg" alt="Nico Eicher" width="45" height="36" draggable="false">
-                  </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link active" id="home-link" href="#">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="contact-link" href="#">Contact</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Projects
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                          <li><a class="dropdown-item user-select-none" data-href="guacamole" id="guacamole-project-link" href="#">Apache Guacamole</a></li>
-                          <li><a class="dropdown-item user-select-none" data-href="nutanix" id="nutanix-project-link" href="#">Nutanix Lab</a></li>
-                          <li><a class="dropdown-item user-select-none" data-href="presence-detector" id="presencedetector-project-link" href="#">Presence Detector</a></li>
-                          <li><a class="dropdown-item user-select-none" data-href="learnjournal" id="learnjournal-project-link" href="#">LearnJournal WebApp</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Socials
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                          <li><a class="dropdown-item user-select-none" href="https://github.com/NicoNewsHD" target="_blank"><i class="fa-brands fa-github"></i> Github</a></li>
-                          <li><a class="dropdown-item user-select-none" href="https://www.linkedin.com/in/nico-eicher-69420924b/" target="_blank"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a></li>
-                          <li><a class="dropdown-item user-select-none" href="https://www.instagram.com/niconews_/?theme=dark" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                          <li><a class="dropdown-item user-select-none" href="https://twitter.com/NicoNews_" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+    <body id="body">
+        <div class="desktop">
+            <nav class="topnav">
+                <a class="active" href="#home" id="">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#socials">Socials</a>
+                <a href="#contact">Contact</a>
               </nav>
-              <section class="content" id="content-container">
-                <div class="position-absolute top-50 start-50 translate-middle">
-                    <div class="text-center text-light user-select-none">
-                        <h1 class="display-1 fw-semibold">Nico Eicher</h1>
-                        <h4 class="fw-light">Hello, i'm Nico. I am an IT trainee.<br>
-                        I like to do fun IT projects, like for example this Website.
-                        </h4>
+            <section>
+                <div class="text-center" id="home">
+                    <h1 class="hero-text">Nico Eicher</h1> 
+                </div>
+            </section>
+            <section class="hidden">
+                <div class="text-center" id="about">
+                    <h1 class="hero-text">About me</h1>
+                    <p>Hi, I'm Nico and i am a IT Trainee.<br>And i like to do fun Projects, like for example this Website</p> 
+                </div>
+            </section>
+            <section class="hidden">
+                <div class="text-center" id="projects">
+                    <h1 class="hero-text">My Projects</h1>
+                    <div class="cards">
+                        <div class="card" onclick="loadPartialProject('guacamole')">
+                            <div class="container">
+                                <img src="/lib/img/desktop-solid.svg" height="120" alt="las vegas" draggable="false">
+                            </div>
+                            <div class="details">
+                                <h3>Apache Guacamole</h3>
+                                <p>Connect to your VMs or Physical Computers with just a Webbrowser and the Power of HTML 5</p>
+                            </div>
+                        </div>
+                        <div class="card" onclick="loadPartialProject('nutanix')">
+                            <div class="container">
+                                <img src="/lib/img/server-solid.svg" alt="New York" height="120" draggable="false">
+                            </div>
+                            <div class="details">
+                                <h3>Nutanix Lab</h3>
+                                <p>2TB RAM, 96 CPU Cores? Yes please</p>
+                            </div>
+                        </div>
+                        <div class="card" onclick="loadPartialProject('learnjournal')">
+                            <div class="container">
+                                <img src="/lib/img/book-journal-whills-solid.svg" height="120" alt="Singapore" draggable="false">
+                            </div>
+                            <div class="details">
+                                <h3>LearnJournal WebApp</h3>
+                                <p>Write you Journal inside a sleek and modern Webapp built with .NET 6.0, Bootstrap and JQuery.</p>
+                            </div>
+                        </div>
+                        <div class="card" onclick="loadPartialProject('presence-detector')">
+                            <div class="container">
+                                <img src="/lib/img/lightbulb-regular.svg" height="120" alt="Singapore" draggable="false">
+                            </div>
+                            <div class="details">
+                                <h3>Presence Detector</h3>
+                                <p>Is someone on the Phone or just listening to Music, find out now with my Presence-Detector™.</p>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-              </section>
-        </section>
-        <script src="lib/js/main.js"></script>
-        <script>
-          $("#contact-link").on("click", function(){
-            loadPartialContact();
-            return false;
-          });
-          $("#home-link").on("click", function(){
-            location. reload();
-          });
-          $("[id$='-project-link']").on("click", function(){
-            loadPartialProject($(this).data("href"));
-            return false;
-          });
-        </script>
+                </div>
+            </section>
+            <section class="hidden">
+                <div class="text-center" id="socials">
+                    <h1 class="hero-text">Socials</h1>
+                    <div class="socials">
+                        <div class="social" onclick="loadSocial('github')">
+                            <div class="container">
+                                <img src="/lib/img/github.svg" height="120" alt="las vegas" draggable="false">
+                            </div>
+                            <div class="details">
+                                <h3>GitHub</h3>
+                                <p>View my Repos!</p>
+                            </div>
+                        </div>
+                        <div class="social" onclick="loadSocial('instagram')">
+                            <div class="container">
+                                <img src="/lib/img/square-instagram.svg" alt="New York" height="120" draggable="false">
+                            </div>
+                            <div class="details">
+                                <h3>Instagram</h3>
+                                <p>Take a look at my Gallery!</p>
+                            </div>
+                        </div>
+                        <div class="social" onclick="loadSocial('twitter')">
+                            <div class="container">
+                                <img src="/lib/img/twitter.svg" height="120" alt="Singapore" draggable="false">
+                            </div>
+                            <div class="details">
+                                <h3>Twitter</h3>
+                                <p>Witness Controversy!</p>
+                            </div>
+                        </div>
+                        <div class="social" onclick="loadSocial('linkedin')">
+                            <div class="container">
+                                <img src="/lib/img/linkedin.svg" height="120" alt="Singapore" draggable="false">
+                            </div>
+                            <div class="details">
+                                <h3>LinkedIn</h3>
+                                <p>For the Business side of things!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="hidden">
+                <div class="text-center" id="contact">
+                    <h1 class="hero-text">Reach me</h1>
+                    <a href="mailto:nico@eicher.tech" id="email"><i class="fa-solid fa-envelope"></i></a> 
+                </div>
+            </section>
+            <footer>
+                <p>Copyright © 2023 Nico Eicher //Presented to <span id="ip-addr"></span></p>
+              </footer>
+            <script defer src="/lib/js/main.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    fetch("https://ipv4.icanhazip.com")
+                    .then((response) => response.text())
+                    .then((text) => {
+                    document.getElementById('ip-addr').innerHTML = text;
+                    });
+                });
+            </script>
+        </div>
+        <div class="mobile">
+            <h1>Nico Eicher</h1>
+            <h3>Please visit this page on a bigger Screen for the full Experience ;)</h3>
+        </div>
     </body>
 </html>

@@ -1,0 +1,23 @@
+<nav class="topnav">
+    <a href="#" onclick="loadHome()">Home</a>
+    <a class="active">Nutanix Lab</a>
+  </nav>
+<section>
+    <div class="text-center">
+        <h1 class="hero-text">Nutanix Lab</h1>
+        <p>At the Company were I'm doing my Apprenticeship we have a Lab on Nutanix AHV.</br>
+            In which we can test all kinds of exciting Technologies!
+        </p> 
+    </div>
+</section>
+<section>
+    <div class="text-center">
+        <h1 class="hero-text">Overview</h1>
+        <p class="explainer">
+        We have OPNSense firwalls, Apache Guacamole, Zabbix Monitoring, Microsoft AD, ADFS and much more!
+        </p> 
+    </div>
+</section>
+<footer>
+    <p>Copyright © 2023 Nico Eicher //Presented to <span id="ip-addr"></span></p>
+  </footer>

@@ -1,0 +1,27 @@
+<nav class="topnav">
+    <a href="#" onclick="loadHome()">Home</a>
+    <a class="active">LearnJournal WebApp</a>
+  </nav>
+<section>
+    <div class="text-center">
+        <h1 class="hero-text">LearnJournal WebApp</h1>
+        <p>
+            In my 6 Months in the Development Department, i learned the art & magic of C# and .NET</br>
+            During this time, i also created a WebApp for all the Apprentices of the Company to write their Journals in.
+        </p> 
+    </div>
+</section>
+<section>
+    <div class="text-center">
+        <h1 class="hero-text">What can it do?</h1>
+        <p>In the LearnJournal™ you can:</p>
+        <ul class="explainer">
+            <li>Write your Journal Entries</li>
+            <li>Recive Feedback from you Supervisor</li>
+            <li>Create Absences</li>
+        </ul>
+    </div>
+</section>
+<footer>
+    <p>Copyright © 2023 Nico Eicher //Presented to <span id="ip-addr"></span></p>
+</footer>

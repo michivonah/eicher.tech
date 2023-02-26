@@ -1,0 +1,23 @@
+<nav class="topnav">
+    <a href="#" onclick="loadHome()">Home</a>
+    <a class="active">Apache Guacamole</a>
+  </nav>
+<section>
+    <div class="text-center">
+        <h1 class="hero-text">Apache Guacamole</h1>
+        <p>Apache Guacamole is a very usefull tool for managing your Server Infrastructure.</br>It is built on HTML5 and WebSocket, so it runs in any modern Webbrowser.</p> 
+    </div>
+</section>
+<section>
+    <div class="text-center">
+        <h1 class="hero-text">Why Guacamole?</h1>
+        <p class="explainer">
+        When comparing Guacamole to other Remote Desktop Software, it is always important to keep the Browser limitations in Mind.
+        For example, you can't use the Windows key in any meaningfull way, this is because Windows doesn't allow you to capture it fully.
+        Nevertheless, Guacamole is a capable Remote Desktop Client / Server, it is performat and it is easy to manage multiple Connections.
+        </p> 
+    </div>
+</section>
+<footer>
+    <p>Copyright © 2023 Nico Eicher //Presented to <span id="ip-addr"></span></p>
+</footer>

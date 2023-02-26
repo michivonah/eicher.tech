@@ -1,35 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-        <title>404 - Not Found</title>
-        <link href="lib/fa/css/all.min.css" rel="stylesheet">
-        <link href="lib/bs5/bootstrap.min.css" rel="stylesheet">
-        <link href="lib/css/site.css" rel="stylesheet">
-        <script src="lib/bs5/bootstrap.bundle.min.js"></script>
-        <link rel="icon" href="lib/img/favicon.ico">
+        <title>404 - Nico Eicher</title>
+        <link rel="stylesheet" href="/lib/css/style.css"/>
+        <link rel="stylesheet" href="/lib/fa/css/all.min.css"/>
+        <link rel="icon" type="image/x-icon" href="/lib/img/ghost-solid.svg">
     </head>
-    <body>
-        <section class="header">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark user-select-none">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="/">
-                        <img src="lib/img/ne-white.svg" alt="Nico Eicher" width="45" height="36" draggable="false">
-                      </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                </div>
+    <body id="body">
+        <div class="desktop">
+            <nav class="topnav">
+                <a class="active">404 - Not Found</a>
+                <a href="/">Home</a>
               </nav>
-              <section class="content">
-                <div class="position-absolute top-50 start-50 translate-middle">
-                    <div class="text-center text-light user-select-none">
-                        <h1 class="display-1 fw-semibold pb-3">404 - Not Found</h1>
-                        <h4 class="fw-light pb-3">Return Home</h4>
-                        <a href="/" class="btn btn-outline-light"><i class="fa fa-house"></i></a>
-                    </div>
-                  </div>
-              </section>
-        </section>
+            <section>
+                <div class="text-center" id="home">
+                    <h1 class="hero-text">404 - Not Found</h1> 
+                </div>
+            </section>
+            <footer>
+                <p>Copyright © 2023 Nico Eicher //Presented to <span id="ip-addr"></span></p>
+              </footer>
+            <script defer src="/lib/js/main.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    fetch("https://ipv4.icanhazip.com")
+                    .then((response) => response.text())
+                    .then((text) => {
+                    document.getElementById('ip-addr').innerHTML = text;
+                    });
+                });
+            </script>
+        </div>
+        <div class="mobile">
+            <h1>404 - Not Found</h1>
+            <h3>Please visit this page on a bigger Screen for the full Experience ;)</h3>
+        </div>
     </body>
 </html>

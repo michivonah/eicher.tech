@@ -59,8 +59,6 @@ body{
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     user-select: none;
-    scroll-behavior: calc();
-    scroll-padding: unset;
 }
 
 ul {

@@ -20,16 +20,7 @@
             <footer>
                 <p>Copyright © 2023 Nico Eicher //Presented to <span id="ip-addr"></span></p>
               </footer>
-            <script defer src="/lib/js/main.js"></script>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    fetch("https://ipv4.icanhazip.com")
-                    .then((response) => response.text())
-                    .then((text) => {
-                    document.getElementById('ip-addr').innerHTML = text;
-                    });
-                });
-            </script>
+            <script defer src="/lib/js/index.js" integrity="sha384-rz2rzM82gGJ/uX3s4UFWC6UfsQfrFyDk8PWbljUHWNdbShlmNSXPcna8sSD1JS5K"></script>
         </div>
         <div class="mobile">
             <h1>404 - Not Found</h1>

@@ -5,6 +5,9 @@
         <link rel="stylesheet" href="/lib/css/style.css"/>
         <link rel="stylesheet" href="/lib/fa/css/all.min.css"/>
         <link rel="icon" type="image/x-icon" href="/lib/img/ghost-solid.svg">
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src *; img-src 'self'; object-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; connect-src https://ipv4.icanhazip.com 'self'"> -->
+        <!-- <meta http-equiv="X-Content-Type-Options" content="nosniff"> -->
+        <!-- <meta http-equiv="X-XSS-Protection" content="1; mode=block"> -->
     </head>
     <body id="body">
         <div class="desktop">
@@ -30,7 +33,7 @@
                 <div class="text-center" id="projects">
                     <h1 class="hero-text">My Projects</h1>
                     <div class="cards">
-                        <div class="card" id="project-btn" data-name="guacamole">
+                        <div class="card" data-name="guacamole">
                             <div class="container">
                                 <img src="/lib/img/desktop-solid.svg" height="120" alt="Apache Guacamole" draggable="false">
                             </div>
@@ -39,7 +42,7 @@
                                 <p>Connect to your VMs or Physical Computers with just a Webbrowser and the Power of HTML 5</p>
                             </div>
                         </div>
-                        <div class="card" id="project-btn" data-name="nutanix">
+                        <div class="card" data-name="nutanix">
                             <div class="container">
                                 <img src="/lib/img/server-solid.svg" alt="Nutanix Lab" height="120" draggable="false">
                             </div>
@@ -48,7 +51,7 @@
                                 <p>2TB RAM, 96 CPU Cores? Yes please</p>
                             </div>
                         </div>
-                        <div class="card" id="project-btn" data-name="learnjournal">
+                        <div class="card" data-name="learnjournal">
                             <div class="container">
                                 <img src="/lib/img/book-journal-whills-solid.svg" height="120" alt="LearnJournal WebApp" draggable="false">
                             </div>
@@ -57,7 +60,7 @@
                                 <p>Write you Journal inside a sleek and modern Webapp built with .NET 6.0, Bootstrap and JQuery.</p>
                             </div>
                         </div>
-                        <div class="card" id="project-btn" data-name="presence-detector">
+                        <div class="card" data-name="presence-detector">
                             <div class="container">
                                 <img src="/lib/img/lightbulb-regular.svg" height="120" alt="Presence Detector" draggable="false">
                             </div>
@@ -73,7 +76,7 @@
                 <div class="text-center" id="socials">
                     <h1 class="hero-text">Socials</h1>
                     <div class="socials">
-                        <div class="social" id="social-btn" data-name="github">
+                        <div class="social" data-name="github">
                             <div class="container">
                                 <img src="/lib/img/github.svg" height="120" alt="Github" draggable="false">
                             </div>
@@ -82,7 +85,7 @@
                                 <p>View my Repos!</p>
                             </div>
                         </div>
-                        <div class="social" id="social-btn" data-name="instagram">
+                        <div class="social" data-name="instagram">
                             <div class="container">
                                 <img src="/lib/img/square-instagram.svg" alt="Instagram" height="120" draggable="false">
                             </div>
@@ -91,7 +94,7 @@
                                 <p>Take a look at my Gallery!</p>
                             </div>
                         </div>
-                        <div class="social" id="social-btn" data-name="twitter">
+                        <div class="social" data-name="twitter">
                             <div class="container">
                                 <img src="/lib/img/twitter.svg" height="120" alt="Twitter" draggable="false">
                             </div>
@@ -100,7 +103,7 @@
                                 <p>Witness Controversy!</p>
                             </div>
                         </div>
-                        <div class="social" id="social-btn" data-name="linkedin">
+                        <div class="social" data-name="linkedin">
                             <div class="container">
                                 <img src="/lib/img/linkedin.svg" height="120" alt="LinkedIn" draggable="false">
                             </div>
@@ -121,22 +124,8 @@
             <footer>
                 <p>Copyright © 2023 Nico Eicher //Presented to <span id="ip-addr"></span></p>
               </footer>
-            <script defer src="/lib/js/main.js"></script>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    fetch("https://ipv4.icanhazip.com")
-                    .then((response) => response.text())
-                    .then((text) => {
-                    document.getElementById('ip-addr').innerHTML = text;
-                    });
-                });
-                document.querySelectorAll(".social").forEach(e => e.addEventListener("click", function(){
-                    loadSocial(e.dataset.name);
-                }));
-                document.querySelectorAll(".card").forEach(e => e.addEventListener("click", function(){
-                    loadPartialProject(e.dataset.name);
-                }));
-            </script>
+            <script defer src="/lib/js/main.js" integrity="sha384-z5nIveWzN0o7bGTO/RIRS7VmDAPgwbh25oOvO5ceKz4PpapNK5Ir1dxBO4qe7xOh"></script>
+            <script defer src="/lib/js/index.js" integrity="sha384-rz2rzM82gGJ/uX3s4UFWC6UfsQfrFyDk8PWbljUHWNdbShlmNSXPcna8sSD1JS5K"></script>
         </div>
         <div class="mobile">
             <h1>Nico Eicher</h1>

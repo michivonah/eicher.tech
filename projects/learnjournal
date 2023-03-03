@@ -1,5 +1,5 @@
 <nav class="topnav">
-    <a href="#" onclick="loadHome()">Home</a>
+    <a href="/">Home</a>
     <a class="active">LearnJournal WebApp</a>
   </nav>
 <section>

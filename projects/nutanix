@@ -1,5 +1,5 @@
 <nav class="topnav">
-    <a href="#" onclick="loadHome()">Home</a>
+    <a href="/">Home</a>
     <a class="active">Nutanix Lab</a>
   </nav>
 <section>
@@ -20,4 +20,4 @@
 </section>
 <footer>
     <p>Copyright © 2023 Nico Eicher //Presented to <span id="ip-addr"></span></p>
-  </footer>
+</footer>
